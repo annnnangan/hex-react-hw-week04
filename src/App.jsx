@@ -347,6 +347,7 @@ function App() {
                 <ul className="pagination">
                   <li
                     className={`page-item ${!pageInfo.has_pre && "disabled"}`}
+                    onClick={() => handlePageChange(pageInfo.current_page - 1)}
                   >
                     <p className="page-link" aria-label="Previous">
                       <span aria-hidden="true">&laquo;</span>
@@ -367,6 +368,7 @@ function App() {
 
                   <li
                     className={`page-item ${!pageInfo.has_next && "disabled"}`}
+                    onClick={() => handlePageChange(pageInfo.current_page + 1)}
                   >
                     <p className="page-link" aria-label="Next">
                       <span aria-hidden="true">&raquo;</span>
